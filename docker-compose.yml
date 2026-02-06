@@ -3,11 +3,13 @@ version: "3.9"
 services:
   flask-api:
     build: .
-    container_name: flask_api
-    ports:
-      - "5000:5000"
+    container_name: pdf_parser
+    # ports:
+    #   - "5000:5000"
     volumes:
-      - ./app:/app  # чтобы изменения в коде сразу отражались
+      - ./app:/app
     environment:
       - FLASK_APP=main.py
       - FLASK_ENV=development
+    networks:
+      - laravel-production
