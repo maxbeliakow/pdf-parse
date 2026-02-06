@@ -8,8 +8,8 @@ services:
       - FLASK_APP=main.py
       - FLASK_ENV=development
     networks:
-      - AssetAccounting_laravel-production
+      - assetaccounting_laravel-production
 
 networks:
-  AssetAccounting_laravel-production:
+  assetaccounting_laravel-production:
     external: true
